@@ -6,7 +6,7 @@ const Partners = () => {
     { name: "1Twente", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/1Twente-1024x612.png", link: "https://www.1twente.nl/" },
     { name: "SuryoyoSat Nederland", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/SuryoyoSat_Nederland-1024x612.png", link: "https://suryoyosat.nl/" },
     { name: "David Productions", image: "https://www.nishofoundation.com/wp-content/uploads/2024/11/Logos_DavidProductions-1024x612.png", link: "#" },
-    { name: "Orthodox Verzekerd", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/OrthodoxVerzekerd-1024x612.png", link: "https://www.orthodoxverzekerd.nl/" },
+    
     { name: "Kaya Advocatenkantoor", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/Kaya-1024x612.png", link: "https://www.kaya-advocatenkantoor.nl/" },
   ];
 
