@@ -2,11 +2,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import cinema01 from "@/assets/projects/cinema-01.jpg";
+import cinema04 from "@/assets/projects/cinema-04.jpg";
+import cinema07 from "@/assets/projects/cinema-07.jpg";
 
 const projectData: Record<string, { title: string; image: string; description: string; content: string[] }> = {
   "ticket-sales-film": {
     title: "Ticket sales for film: started",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_01.jpg",
+    image: cinema01,
     description: "The True Shepherd documentary film tickets are now available for purchase.",
     content: [
       "The Nisho Foundation is thrilled to announce that ticket sales for the documentary film 'True Shepherd' have officially started.",
@@ -17,7 +20,7 @@ const projectData: Record<string, { title: string; image: string; description: s
   },
   "true-shepherd-diemen": {
     title: "True Shepherd in Diemen cinema: a great success",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_04.jpg",
+    image: cinema04,
     description: "A successful screening of the True Shepherd documentary in Diemen cinema.",
     content: [
       "The screening of 'True Shepherd' at a cinema in Diemen was a tremendous success, bringing together community members and film enthusiasts alike.",
@@ -28,7 +31,7 @@ const projectData: Record<string, { title: string; image: string; description: s
   },
   "film-premiere": {
     title: "Film premiere True Shepherd",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_07.jpg",
+    image: cinema07,
     description: "The premiere of our documentary celebrating Archbishop Mor Julius Yeshu Cicek.",
     content: [
       "The film premiere of 'True Shepherd' marked a historic moment for the Nisho Foundation and the entire Aramaic community.",

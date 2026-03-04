@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -24,7 +25,10 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(25,40%,15%)] via-[hsl(25,35%,11%)] to-[hsl(25,30%,7%)]">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=2670')] bg-cover bg-center opacity-40" />
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[hsl(0,0%,0%,0.2)] to-[hsl(0,0%,0%,0.4)]" />
@@ -52,18 +56,12 @@ const Hero = () => {
               </p>
               <div className="mt-12 flex gap-4 justify-center animate-fade-in">
                 <Link to="/about">
-                  <Button
-                    size="lg"
-                    className="bg-foreground/90 text-background hover:bg-foreground transition-all duration-300"
-                  >
+                  <Button size="lg" className="bg-foreground/90 text-background hover:bg-foreground transition-all duration-300">
                     Learn More
                   </Button>
                 </Link>
                 <Link to="/support">
-                  <Button
-                    size="lg"
-                    className="bg-[hsl(0,85%,50%)] text-primary-foreground hover:bg-[hsl(0,85%,45%)] transition-all duration-300 shadow-lg"
-                  >
+                  <Button size="lg" className="bg-[hsl(0,85%,50%)] text-primary-foreground hover:bg-[hsl(0,85%,45%)] transition-all duration-300 shadow-lg">
                     Support Us
                   </Button>
                 </Link>
