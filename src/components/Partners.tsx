@@ -1,12 +1,20 @@
+import ggmgastro from "@/assets/partners/ggmgastro.png";
+import bisdomNederland from "@/assets/partners/bisdom-nederland.png";
+import bisdomDeutschland from "@/assets/partners/bisdom-deutschland.png";
+import oneTwente from "@/assets/partners/1twente.png";
+import suryoyosat from "@/assets/partners/suryoyosat.png";
+import davidProductions from "@/assets/partners/david-productions.png";
+import kaya from "@/assets/partners/kaya.png";
+
 const Partners = () => {
   const partners = [
-    { name: "GGM Gastro", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/ggmgastro-1024x612.png" },
-    { name: "Bisdom Nederland", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/Bisdom_Nederland-1024x612.png" },
-    { name: "Bisdom Deutschland", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/Bisdom_Duetch-1024x612.png" },
-    { name: "1Twente", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/1Twente-1024x612.png" },
-    { name: "SuryoyoSat Nederland", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/SuryoyoSat_Nederland-1024x612.png" },
-    { name: "David Productions", image: "https://www.nishofoundation.com/wp-content/uploads/2024/11/Logos_DavidProductions-1024x612.png" },
-    { name: "Kaya Advocatenkantoor", image: "https://www.nishofoundation.com/wp-content/uploads/2024/10/Kaya-1024x612.png" },
+    { name: "GGM Gastro", image: ggmgastro },
+    { name: "Bisdom Nederland", image: bisdomNederland },
+    { name: "Bisdom Deutschland", image: bisdomDeutschland },
+    { name: "1Twente", image: oneTwente },
+    { name: "SuryoyoSat Nederland", image: suryoyosat },
+    { name: "David Productions", image: davidProductions },
+    { name: "Kaya Advocatenkantoor", image: kaya },
   ];
 
   return (

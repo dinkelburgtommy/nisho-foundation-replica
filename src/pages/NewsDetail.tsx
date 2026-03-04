@@ -2,12 +2,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import statueNew from "@/assets/news/statue-new.jpg";
+import herdenking from "@/assets/news/herdenking.jpg";
+import dePosten from "@/assets/news/de-posten.jpg";
+import cinema04 from "@/assets/projects/cinema-04.jpg";
+import cinema07 from "@/assets/projects/cinema-07.jpg";
+import cinema01 from "@/assets/projects/cinema-01.jpg";
 
 const newsArticles: Record<string, { title: string; date: string; image: string; content: string[] }> = {
   "music-video-true-shepherd": {
     title: "MUSIC VIDEO OF THE NEW SONG 'TRUE SHEPHERD' IN HONOR OF ARCHBISHOP MOR JULIUS YESHU CICEK NOW ONLINE",
     date: "December 2024",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/12/StatueNew.jpg",
+    image: statueNew,
     content: [
       "The Nisho Foundation is proud to announce the release of the music video for the new song 'True Shepherd,' created in honor of Archbishop Mor Julius Yeshu Cicek.",
       "This music video celebrates the life and legacy of Archbishop Cicek, who dedicated his life to the preservation of the Syriac Aramaic language and culture. The song captures the spirit of his mission and the impact he had on the Aramaic community worldwide.",
@@ -18,7 +24,7 @@ const newsArticles: Record<string, { title: string; date: string; image: string;
   "commemoration-archbishop-cicek": {
     title: "HUNDREDS OF FAITHFUL PRESENT DURING 19-YEAR COMMEMORATION OF ARCHBISHOP CICEK",
     date: "November 2024",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/11/Herdenking_00.jpg",
+    image: herdenking,
     content: [
       "Hundreds of believers gathered at the Mor Ephrem Monastery to commemorate the 19th anniversary of the passing of Archbishop Mor Julius Yeshu Cicek.",
       "The commemoration brought together members of the Syriac Aramaic community from across the Netherlands and beyond, united in their respect and admiration for the Archbishop's lifelong dedication to their heritage.",
@@ -29,7 +35,7 @@ const newsArticles: Record<string, { title: string; date: string; image: string;
   "film-screening-de-posten": {
     title: "FILM SCREENING TRUE SHEPHERD AT CAREINSTITUTION DE POSTEN IN ENSCHEDE",
     date: "December 2024",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/12/DePosten_Wareherder_01-scaled.jpg",
+    image: dePosten,
     content: [
       "The Nisho Foundation organized a special screening of the documentary film 'True Shepherd' at care institution De Posten in Enschede.",
       "This screening was part of our ongoing efforts to share the story of Archbishop Mor Julius Yeshu Cicek with diverse audiences, including elderly residents of care institutions.",
@@ -40,7 +46,7 @@ const newsArticles: Record<string, { title: string; date: string; image: string;
   "true-shepherd-diemen-cinema": {
     title: "True Shepherd in Diemen cinema: a great success",
     date: "March 5, 2023",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_04.jpg",
+    image: cinema04,
     content: [
       "The screening of the documentary 'True Shepherd' at a cinema in Diemen was a resounding success, drawing a large and enthusiastic audience.",
       "The documentary, which chronicles the life and legacy of Archbishop Mor Julius Yeshu Cicek, resonated deeply with viewers from all backgrounds.",
@@ -51,7 +57,7 @@ const newsArticles: Record<string, { title: string; date: string; image: string;
   "film-premiere-true-shepherd": {
     title: "Film premiere True Shepherd: a successful event",
     date: "October 31, 2023",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_07.jpg",
+    image: cinema07,
     content: [
       "The premiere of the documentary film 'True Shepherd' was a landmark event for the Nisho Foundation and the Aramaic community.",
       "The film celebrates the life and work of Archbishop Mor Julius Yeshu Cicek, highlighting his tireless efforts to preserve the Syriac Aramaic language and culture.",
@@ -62,7 +68,7 @@ const newsArticles: Record<string, { title: string; date: string; image: string;
   "ticket-sales-true-shepherd": {
     title: "Ticket sales for the film True Shepherd started",
     date: "October 24, 2023",
-    image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_01.jpg",
+    image: cinema01,
     content: [
       "The Nisho Foundation is excited to announce that tickets for the documentary film 'True Shepherd' are now available for purchase.",
       "This documentary tells the inspiring story of Archbishop Mor Julius Yeshu Cicek and his dedication to the Syriac Aramaic community.",
