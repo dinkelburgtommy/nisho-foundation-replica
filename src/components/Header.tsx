@@ -91,17 +91,25 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="text-4xl font-bold leading-none">
+            <div className="flex flex-col items-start leading-none">
               <div className={cn(
-                "transition-colors font-extrabold tracking-tight",
+                "text-3xl font-extrabold tracking-wide flex items-end transition-colors",
                 showTransparent ? "text-primary-foreground" : "text-foreground"
               )}>
-                N<span className="text-[hsl(0,90%,55%)]">I</span><span className={cn(
-                  "transition-colors",
+                <span>N</span>
+                <span className="relative inline-flex flex-col items-center mx-[-2px]">
+                  <svg className="w-3 h-3 mb-[-2px]" viewBox="0 0 24 24" fill="hsl(0,85%,50%)">
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                  <span className="text-[hsl(0,85%,50%)] font-extrabold">I</span>
+                </span>
+                <span>SH</span>
+                <span className={cn(
+                  "relative inline-flex items-center transition-colors",
                   showTransparent ? "text-primary-foreground" : "text-foreground"
-                )}>SHO</span>
+                )}>O</span>
               </div>
-              <div className="text-base font-bold tracking-[0.2em] text-[hsl(0,75%,45%)] mt-0.5">
+              <div className="text-[10px] font-bold tracking-[0.35em] text-[hsl(0,75%,45%)] mt-0.5 ml-[2px]">
                 FOUNDATION
               </div>
             </div>
