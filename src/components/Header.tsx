@@ -33,9 +33,9 @@ const Header = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "https://www.instagram.com/nisho_foundation", label: "Instagram" },
-    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61564016903724", label: "Facebook" },
-    { icon: TikTokIcon, href: "https://www.tiktok.com/@nisho.foundation", label: "TikTok" },
+    { icon: Instagram, href: "/contact", label: "Instagram" },
+    { icon: Facebook, href: "/contact", label: "Facebook" },
+    { icon: TikTokIcon, href: "/contact", label: "TikTok" },
     { icon: Mail, href: "mailto:nishofoundation@gmail.com", label: "Email" },
   ];
 
@@ -61,17 +61,24 @@ const Header = () => {
         <div className="container mx-auto px-4 h-full flex items-center justify-end gap-4">
           {socialLinks.map((social) => {
             const IconComponent = social.icon;
-            return (
+            return social.href.startsWith("mailto:") ? (
               <a
                 key={social.label}
                 href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity"
                 aria-label={social.label}
               >
                 <IconComponent />
               </a>
+            ) : (
+              <Link
+                key={social.label}
+                to={social.href}
+                className="hover:opacity-70 transition-opacity"
+                aria-label={social.label}
+              >
+                <IconComponent />
+              </Link>
             );
           })}
           <div className="flex items-center gap-2 ml-4 border-l border-primary-foreground/20 pl-4">

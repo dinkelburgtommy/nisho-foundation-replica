@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -50,22 +51,22 @@ const Hero = () => {
                 {slide.subtitle}
               </p>
               <div className="mt-12 flex gap-4 justify-center animate-fade-in">
-                <a href="/about">
+                <Link to="/about">
                   <Button
                     size="lg"
                     className="bg-foreground/90 text-background hover:bg-foreground transition-all duration-300"
                   >
                     Learn More
                   </Button>
-                </a>
-                <a href="/support">
+                </Link>
+                <Link to="/support">
                   <Button
                     size="lg"
                     className="bg-[hsl(0,85%,50%)] text-primary-foreground hover:bg-[hsl(0,85%,45%)] transition-all duration-300 shadow-lg"
                   >
                     Support Us
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

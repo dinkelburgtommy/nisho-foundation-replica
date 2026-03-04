@@ -22,18 +22,18 @@ const Footer = () => {
               Empowering the Aramaic community through education, culture, and heritage preservation. Building bridges between Eastern wisdom and Western thought.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/nisho_foundation" target="_blank" rel="noopener noreferrer"
+              <Link to="/contact"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=61564016903724" target="_blank" rel="noopener noreferrer"
+              </Link>
+              <Link to="/contact"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a href="https://www.tiktok.com/@nisho.foundation" target="_blank" rel="noopener noreferrer"
+              </Link>
+              <Link to="/contact"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <TikTokIcon />
-              </a>
+              </Link>
               <a href="mailto:nishofoundation@gmail.com"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <Mail className="h-5 w-5" />

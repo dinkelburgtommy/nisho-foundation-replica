@@ -1,22 +1,23 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const LatestNews = () => {
   const mainNews = [
     {
       title: "MUSIC VIDEO OF THE NEW SONG 'TRUE SHEPHERD' IN HONOR OF ARCHBISHOP MOR JULIUS YESHU CICEK NOW ONLINE",
       image: "https://www.nishofoundation.com/wp-content/uploads/2024/12/StatueNew.jpg",
-      link: "https://www.nishofoundation.com/music-video-of-the-new-song-true-shepherd-in-honor-of-archbishop-mor-julius-yeshu-cicek-now-online/",
+      slug: "music-video-true-shepherd",
     },
     {
       title: "HUNDREDS OF FAITHFUL PRESENT DURING 19-YEAR COMMEMORATION OF ARCHBISHOP CICEK",
       image: "https://www.nishofoundation.com/wp-content/uploads/2024/11/Herdenking_00.jpg",
-      link: "https://www.nishofoundation.com/hundreds-of-believers-present-during-the-19-year-commemoration-of-archbishop-cicek-at-the-mor-ephrem-monastery/",
+      slug: "commemoration-archbishop-cicek",
     },
     {
       title: "FILM SCREENING TRUE SHEPHERD AT CAREINSTITUTION DE POSTS IN ENSCHEDE",
       image: "https://www.nishofoundation.com/wp-content/uploads/2024/12/DePosten_Wareherder_01-scaled.jpg",
-      link: "https://www.nishofoundation.com/film-screening-true-shepherd-at-careinstitution-de-posts-in-enschede/",
+      slug: "film-screening-de-posten",
     },
   ];
 
@@ -24,17 +25,17 @@ const LatestNews = () => {
     {
       date: "MARCH 5, 2023",
       title: "True Shepherd in Diemen cinema a great success",
-      link: "https://www.nishofoundation.com/title/",
+      slug: "true-shepherd-diemen-cinema",
     },
     {
       date: "OCTOBER 31, 2023",
       title: "Film premiere True Shepherd: a successful event",
-      link: "https://www.nishofoundation.com/post-3/",
+      slug: "film-premiere-true-shepherd",
     },
     {
       date: "OCTOBER 24, 2023",
       title: "Ticket sales for the film True Shepherd started",
-      link: "https://www.nishofoundation.com/post-2/",
+      slug: "ticket-sales-true-shepherd",
     },
   ];
 
@@ -50,11 +51,9 @@ const LatestNews = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {mainNews.map((item, index) => (
-            <a
+            <Link
               key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              to={`/news/${item.slug}`}
               className="block"
             >
               <Card className="group overflow-hidden border shadow-sm hover:shadow-md transition-all duration-300 bg-card h-full">
@@ -71,11 +70,11 @@ const LatestNews = () => {
                   </h3>
                   <div className="flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
                     Read More
-                    <ExternalLink className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4" />
                   </div>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -85,11 +84,9 @@ const LatestNews = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {moreNews.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                to={`/news/${item.slug}`}
                 className="group block p-6 border border-border hover:border-primary transition-all duration-200"
               >
                 <p className="text-sm text-muted-foreground mb-3">
@@ -98,7 +95,7 @@ const LatestNews = () => {
                 <h4 className="text-base font-medium text-foreground group-hover:text-primary transition-colors">
                   {item.title}
                 </h4>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

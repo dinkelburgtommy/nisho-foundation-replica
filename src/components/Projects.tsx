@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
@@ -7,19 +8,19 @@ const Projects = () => {
       title: "Ticket sales for film: started",
       description: "The True Shepherd documentary film tickets are now available for purchase.",
       image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_01.jpg",
-      link: "https://www.nishofoundation.com/post-2/",
+      slug: "ticket-sales-film",
     },
     {
       title: "True Shepherd in Diemen cinema: a great success",
       description: "A successful screening of the True Shepherd documentary in Diemen cinema.",
       image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_04.jpg",
-      link: "https://www.nishofoundation.com/title/",
+      slug: "true-shepherd-diemen",
     },
     {
       title: "Film premiere True Shepherd",
       description: "The premiere of our documentary celebrating Archbishop Mor Julius Yeshu Cicek.",
       image: "https://www.nishofoundation.com/wp-content/uploads/2024/09/Cinema_07.jpg",
-      link: "https://www.nishofoundation.com/post-3/",
+      slug: "film-premiere",
     },
   ];
 
@@ -38,11 +39,9 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <a
+            <Link
               key={index}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              to={`/projects/${project.slug}`}
               className="block"
             >
               <Card className="group overflow-hidden border shadow-sm hover:shadow-md transition-all duration-300 bg-card h-full">
@@ -65,11 +64,11 @@ const Projects = () => {
                   </p>
                   <div className="flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
                     Learn More
-                    <ExternalLink className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4" />
                   </div>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

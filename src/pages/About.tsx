@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Partners from "@/components/Partners";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -39,15 +40,15 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-bold text-primary mb-4">NEWS</h3>
                 <div className="space-y-4">
-                  <a href="https://www.nishofoundation.com/title/" target="_blank" rel="noopener noreferrer" className="block p-4 border border-border hover:border-primary transition-colors">
+                  <Link to="/news/true-shepherd-diemen-cinema" className="block p-4 border border-border hover:border-primary transition-colors">
                     <h4 className="font-medium text-foreground hover:text-primary transition-colors">True Shepherd in Diemen cinema a great success</h4>
-                  </a>
-                  <a href="https://www.nishofoundation.com/post-3/" target="_blank" rel="noopener noreferrer" className="block p-4 border border-border hover:border-primary transition-colors">
+                  </Link>
+                  <Link to="/news/film-premiere-true-shepherd" className="block p-4 border border-border hover:border-primary transition-colors">
                     <h4 className="font-medium text-foreground hover:text-primary transition-colors">Film premiere True Shepherd: a successful event</h4>
-                  </a>
-                  <a href="https://www.nishofoundation.com/post-2/" target="_blank" rel="noopener noreferrer" className="block p-4 border border-border hover:border-primary transition-colors">
+                  </Link>
+                  <Link to="/news/ticket-sales-true-shepherd" className="block p-4 border border-border hover:border-primary transition-colors">
                     <h4 className="font-medium text-foreground hover:text-primary transition-colors">Ticket sales for the film True Shepherd started</h4>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
