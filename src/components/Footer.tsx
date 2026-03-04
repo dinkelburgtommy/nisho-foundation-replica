@@ -14,9 +14,18 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div className="col-span-2">
-            <div className="text-2xl font-bold mb-4">
-              N<span className="text-[hsl(0,85%,50%)]">I</span>SHO
-              <div className="text-sm text-[hsl(0,75%,45%)] tracking-[0.2em] mt-1">FOUNDATION</div>
+            <div className="flex flex-col items-start leading-none mb-4">
+              <div className="text-2xl font-extrabold tracking-wide flex items-end text-primary-foreground">
+                <span>N</span>
+                <span className="relative inline-flex flex-col items-center mx-[-1px]">
+                  <svg className="w-2.5 h-2.5 mb-[-2px]" viewBox="0 0 24 24" fill="hsl(0,85%,50%)">
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                  <span className="text-[hsl(0,85%,50%)] font-extrabold">I</span>
+                </span>
+                <span>SHO</span>
+              </div>
+              <div className="text-[9px] font-bold tracking-[0.35em] text-[hsl(0,75%,45%)] mt-0.5 ml-[1px]">FOUNDATION</div>
             </div>
             <p className="text-primary-foreground/80 mb-4 leading-relaxed">
               Empowering the Aramaic community through education, culture, and heritage preservation. Building bridges between Eastern wisdom and Western thought.
