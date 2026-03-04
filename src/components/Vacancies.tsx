@@ -1,14 +1,15 @@
-import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Vacancies = () => {
   const vacancies = [
     {
       title: "General Intern",
-      link: "https://www.nishofoundation.com/vacancies/",
+      slug: "general-intern",
     },
     {
       title: "Editorial and production intern",
-      link: "https://www.nishofoundation.com/vacancies-editorial-intern/",
+      slug: "editorial-intern",
     },
   ];
 
@@ -24,18 +25,16 @@ const Vacancies = () => {
 
         <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {vacancies.map((vacancy, index) => (
-            <a
+            <Link
               key={index}
-              href={vacancy.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              to={`/vacancies/${vacancy.slug}`}
               className="group block p-6 border border-border hover:border-primary bg-card transition-all duration-200"
             >
               <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-2">
                 {vacancy.title}
-                <ExternalLink className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4" />
               </h3>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
