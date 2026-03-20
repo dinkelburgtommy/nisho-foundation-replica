@@ -49,10 +49,6 @@ const Projects = () => {
                 </div>
                 <CardContent className="p-6">
                   <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-                  <div className="flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
-                    Learn More
-                    <ArrowRight className="h-4 w-4" />
-                  </div>
                 </CardContent>
               </Card>
             </Link>
