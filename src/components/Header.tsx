@@ -49,47 +49,28 @@ const Header = () => {
           : "bg-background/98 backdrop-blur-sm shadow-sm"
       )}
     >
-      {/* Top Bar with Social Links */}
-      <div
-        className={cn(
-          "border-b transition-all duration-300",
-          isScrolled || !isHome ? "h-0 overflow-hidden opacity-0" : "h-10 opacity-100",
-          showTransparent ? "border-primary-foreground/20" : "border-transparent"
-        )}
-      >
+      {/* Top Social Bar */}
+      <div className={cn("border-b transition-all duration-300", isScrolled || !isHome ? "h-0 overflow-hidden opacity-0" : "h-10 opacity-100")}>
         <div className="container mx-auto px-4 h-full flex items-center justify-end gap-4">
           {socialLinks.map((social) => {
-            const IconComponent = social.icon;
+            const Icon = social.icon;
             return social.href.startsWith("mailto:") ? (
-              <a
-                key={social.label}
-                href={social.href}
-                className="hover:opacity-70 transition-opacity"
-                aria-label={social.label}
-              >
-                <IconComponent />
+              <a key={social.label} href={social.href} aria-label={social.label} className="hover:opacity-70 transition-opacity">
+                <Icon />
               </a>
             ) : (
-              <Link
-                key={social.label}
-                to={social.href}
-                className="hover:opacity-70 transition-opacity"
-                aria-label={social.label}
-              >
-                <IconComponent />
+              <Link key={social.label} to={social.href} aria-label={social.label} className="hover:opacity-70 transition-opacity">
+                <Icon />
               </Link>
             );
           })}
-          <div className="flex items-center gap-2 ml-4 border-l border-primary-foreground/20 pl-4">
-            <span className="text-xs font-medium">EN</span>
-          </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
+      {/* Main Header */}
       <div className="container mx-auto px-4 flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Nisho Foundation Logo" className="h-10 w-auto" />
+          <img src={logo} alt="Logo" className="h-10 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -111,12 +92,7 @@ const Header = () => {
           ))}
         </nav>
 
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
+        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? <X /> : <Menu />}
         </Button>
       </div>
