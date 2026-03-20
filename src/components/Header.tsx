@@ -18,9 +18,7 @@ const Header = () => {
   const isHome = location.pathname === "/";
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -88,41 +86,42 @@ const Header = () => {
         </div>
       </div>
 
-      <Link to="/" className="flex items-center gap-2">
-        <img
-          src="/logo.png"
-          alt="Nisho Foundation Logo"
-          className="h-10 w-auto"
-          />
-      </Link>
-      
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={cn(
-                  "text-sm font-medium relative group transition-colors",
-                  showTransparent ? "text-primary-foreground hover:opacity-80" : "text-foreground hover:text-primary",
-                  location.pathname === item.href && "text-primary"
-                )}
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full" />
-              </Link>
-            ))}
-          </nav>
+      {/* Main Navigation */}
+      <div className="container mx-auto px-4 flex items-center justify-between h-20">
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Nisho Foundation Logo" className="h-10 w-auto" />
+        </Link>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </Button>
-        </div>
+        <nav className="hidden md:flex items-center gap-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              to={item.href}
+              className={cn(
+                "text-sm font-medium relative group transition-colors",
+                showTransparent
+                  ? "text-primary-foreground hover:opacity-80"
+                  : "text-foreground hover:text-primary",
+                location.pathname === item.href && "text-primary"
+              )}
+            >
+              {item.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full" />
+            </Link>
+          ))}
+        </nav>
 
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X /> : <Menu />}
+        </Button>
+      </div>
+
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background border-t animate-fade-in">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
