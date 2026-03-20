@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Instagram, Facebook, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
+import logo from "./assets/logo.png";
 
 const TikTokIcon = () => (
   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
@@ -87,34 +88,14 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="flex flex-col items-start leading-none">
-              <div className={cn(
-                "text-3xl font-extrabold tracking-wide flex items-end transition-colors",
-                showTransparent ? "text-primary-foreground" : "text-foreground"
-              )}>
-                <span>N</span>
-                <span className="relative inline-flex flex-col items-center mx-[-2px]">
-                  <svg className="w-3 h-3 mb-[-2px]" viewBox="0 0 24 24" fill="hsl(0,85%,50%)">
-                    <circle cx="12" cy="12" r="10" />
-                  </svg>
-                  <span className="text-[hsl(0,85%,50%)] font-extrabold">I</span>
-                </span>
-                <span>SH</span>
-                <span className={cn(
-                  "relative inline-flex items-center transition-colors",
-                  showTransparent ? "text-primary-foreground" : "text-foreground"
-                )}>O</span>
-              </div>
-              <div className="text-[10px] font-bold tracking-[0.35em] text-[hsl(0,75%,45%)] mt-0.5 ml-[2px]">
-                FOUNDATION
-              </div>
-            </div>
-          </Link>
-
+      <Link to="/" className="flex items-center gap-2">
+        <img
+          src="/logo.png"
+          alt="Nisho Foundation Logo"
+          className="h-10 w-auto"
+          />
+      </Link>
+      
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
