@@ -122,7 +122,6 @@ const Header = () => {
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>
         </div>
-      </div>
 
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background border-t animate-fade-in">
