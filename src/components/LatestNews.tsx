@@ -61,10 +61,6 @@ const LatestNews = () => {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-4 line-clamp-3 group-hover:text-primary transition-colors">{item.title}</h3>
-                  <div className="flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
-                    Read More
-                    <ArrowRight className="h-4 w-4" />
-                  </div>
                 </CardContent>
               </Card>
             </Link>
