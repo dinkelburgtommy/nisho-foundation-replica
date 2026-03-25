@@ -87,11 +87,3 @@
     "vitest": "^3.2.4"
   }
 }
-
-{
-  "overrides": {
-    "whatwg-encoding": "@exodus/bytes",
-    "domexception": "$native",
-    "abab": "$native"
-  }
-}
